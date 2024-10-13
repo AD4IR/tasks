@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PlusCircle, Trash2 } from 'lucide-react';
+import InstallPrompt from './components/InstallPrompt';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="max-w-md mx-auto my-8 p-6 bg-purple-900 rounded-lg shadow-lg">
-      <h1 className="text-3xl font-bold mb-4 text-green-400">Lista de tareas</h1>
+      <h1 className="text-3xl font-bold mb-4 text-green-400">To-Do List</h1>
       <div className="flex mb-4">
         <input
           type="text"
@@ -61,8 +62,9 @@ function App() {
           </li>
         ))}
       </ul>
+      <InstallPrompt />
     </div>
   );
 }
 
-export default App;
+export default App; 
